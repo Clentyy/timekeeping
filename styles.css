@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background-image: url('ojt photos/gradient bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    
+    display: flex;
+    align-items: center;
+}
+
+.logo img { /*SF GROUP LOGO*/
+    width: 50px;
+    margin-top: 200px;
+    margin-right: 10px;
+}
+
+.sub {
+    color: #1c1c62;
+}
+
+.partner-logo img {
+    width: 150px;
+}
+
+.clock {
+    text-align:left;
+    margin-top: 20px;
+}
+
+.clock h1 { /* REAL CLOCK TIME*/
+    font-size: 130px;
+    color: #1c1c62;
+}
+
+.clock p { /*DATE and DAY TODAY*/
+    font-size: 30px;
+    color: #1c1c62;
+}
+
+.btn { /*TIME IN TIME OUT BUTTON*/
+    padding: 7px 22px;
+    background: #1c1c62;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.panel {
+    text-align: center;
+    font-size: 10px;
+    width: 30%;
+    background: #1c1c62;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.note {
+    background: #f9e79f;
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.note::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.announcement {
+    margin-top: 20px;
+    padding: 10px;
+    background: #1c1c62;
+    color: #fff;
+    border-radius: 10px;
+    width: 81%;
+}
+
+.announcement input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.announcement button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15%;
+    background-image: url('ojt photos/grey bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.profile p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.profile a {
+    color: red;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.notifications {
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
