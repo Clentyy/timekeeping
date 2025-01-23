@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background-size: cover;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,17 +39,31 @@ header {
 }
 
 .logo img { /*SF GROUP LOGO*/
-    width: 50px;
-    margin-top: 200px;
+    width: 350px; /* Change this to your desired size */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 275px;
     margin-right: 10px;
+}
 }
 
 .sub {
     color: #1c1c62;
 }
 
-.partner-logo img {
-    width: 150px;
+.partner-logo {
+    display: flex;
+    align-items: center;
+}
+
+.partner-logo img { /*Company Logos*/
+    background-color: white; 
+    padding: 10px;           /* Adds space around the logo */
+    border-radius: 10px;     /* Optional rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 225px; /* Change this to your desired size */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 300px;
+    margin-right: 450px;
 }
 
 .clock {
@@ -58,23 +72,33 @@ header {
 }
 
 .clock h1 { /* REAL CLOCK TIME*/
-    font-size: 130px;
+    font-size: 100px;
     color: #1c1c62;
+    margin-left: 40px;
 }
 
 .clock p { /*DATE and DAY TODAY*/
     font-size: 30px;
     color: #1c1c62;
+    margin-left: 70px;
+}
+
+.clock p span {
+    display: inline-block; /* Ensures both are side by side */
+    margin-right: 250px; /* Add space between the date and the day */
 }
 
 .btn { /*TIME IN TIME OUT BUTTON*/
-    padding: 7px 22px;
+
+    padding: 10px 32px;
+    font-size: 15px;
     background: #1c1c62;
     color: #fff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    margin: 20px;
+    margin: 50px;
+    margin-left: 150px;
 }
 
 .content {
