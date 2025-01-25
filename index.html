@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SF Group Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="function.js">
 </head>
 <body>
     <div class="container">
@@ -18,45 +17,62 @@
             </div>
         </header>
         <div class="clock">
-            <h1 id="time">00:00:00 PM</h1>
-            <p id="date">
-                <span>January 21, 2025</span>
-                <span>Tuesday</span>
-            </p>
-            <button class="btn">Time in</button>
-            <button class="btn">Time out</button>
-        </div>
-        <div class="content">
-            <div class="panel">
-                <h3>Birthdays</h3>
-                <div class="note"></div>
-                <div class="note"></div>
+            <div class="clock-content">
+                <h1 id="time">00:00:00 PM</h1>
+                <p id="date">
+                    <span>January 21, 2025</span>
+                    <span>Tuesday</span>
+                </p>
+                <div>
+                    <button class="btn">TIME IN</button>
+                    <button class="btn">TIME OUT</button>
+                </div>
             </div>
-            <div class="panel">
-                <h3>Milestones</h3>
-                <div class="note"></div>
-                <div class="note"></div>
+            <div class="camera">
+                <video id="video" autoplay></video>
             </div>
+        </div>  
+        
+        <div class="attendance-list">
+            <h2>Attendance List</h2>
+            <div class="note"></div> <!-- Yellow note -->
+            <ul id="attendance-items">
+                <!-- JavaScript dynamically appends list items here -->
+            </ul>
         </div>
-        <div class="announcement">
-            <h3>Announcement</h3>
-            <input type="text" placeholder="Type your announcement here...">
-            <input type="text" placeholder="Type your announcement here...">
-            <input type="text" placeholder="Type your announcement here...">
-            <button>+50</button>
-        </div>
+        
+        
+        
+        
+
         <div class="sidebar">
-            <div class="profile">
-                <img src="profile.png" alt="User">
-                <p>082731</p>
-                <a href="#">Sign out</a>
+            <!-- Birthdays Section -->
+            <div class="birthdays">
+                <div class="panel">
+                    <h3>Birthdays</h3>
+                    <div class="note"></div>
+                </div>
             </div>
-            <div class="notifications">
-                <h3>Notifications</h3>
+        
+            <!-- Milestones Section -->
+            <div class="milestones">
+                <div class="panel">
+                    <h3>Milestones</h3>
+                    <div class="note"></div>
+                </div>
+            </div>
+        
+            <!-- Announcements Section -->
+            <div class="announcements">
+                <div class="panel">
+                    <h3>Announcements</h3>
+                    <div class="note"></div>
+                    <button class="sign-out-btn">Sign Out</button>
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    
+    <script src="function.js"></script>
 </body>
 </html>
-
