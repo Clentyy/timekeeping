@@ -18,6 +18,10 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+h1, h2, h3, .clock p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .container {
     width: 100%;
     height: 100vh; /* Make the container fit the screen height */
@@ -55,6 +59,7 @@ header {
     align-items: center;
 }
 
+
 .partner-logo img { /* Company Logos */
     background-color: white; 
     padding: 10px; /* Adds space around the logo */
@@ -66,11 +71,19 @@ header {
     margin-right: 450px;
 }
 
+.logo img:hover,
+.partner-logo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
 .clock {
-    display: flex; /* Align date/time and camera in a row */
-    align-items: center; /* Vertically align content */
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     margin-left: 40px;
+    flex-grow: 1;
+    justify-content: flex-start;  /* Aligns items (including the camera) to the left */
 }
 
 .clock-content {
@@ -80,33 +93,33 @@ header {
 .clock h1 { /* Real clock time styling */
     font-size: 130px;
     color: #621c1c;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 0; /* Remove bottom margin to align neatly */
 }
 
 .clock p {
     font-size: 40px;
     color: #be6364;
-    display: flex;
-    align-items: center;
     white-space: nowrap; /* Prevent line breaks */
-    justify-content: center; /* Optional: center content horizontally */
     margin-left: 55px;
 }
 
 .clock p span {
-    margin-right: 170px; /* Adjust spacing between date and day */
+    margin-right: 185px; /* Adjust spacing between date and day */
 }
 
 .camera {
-    width: 420px; /* Adjust width to fit layout */
+    position: absolute; /* Absolute positioning */
+    width: 420px;
     height: 350px;
     border: 2px solid #621c1c;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    margin-right: 275px;
     margin-top: 35px;
+    left: 840px; /* Move camera to the very left of its parent container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
 
 .camera video {
     width: 100%;
@@ -124,11 +137,19 @@ header {
     cursor: pointer;
     margin: 50px;
     margin-left: 115px;
+    transition: background 0.3s ease, transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
+.btn:focus {
+    background: #be6364;
+    transform: scale(1.05); /* Button enlarges slightly */
+}
+
 .btn:hover {
-    color: #be6364; /* Darker red for hover effect */
+    background-color: #be6364; /* Add color change on hover */
+    transform: scale(1.1); /* Enlarge button slightly */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .attendance-list {
@@ -141,7 +162,9 @@ header {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     position: relative;
     top: -40px;
-    height: calc(100vh - 200px); /* Ensure the attendance list fits within the screen height */
+    height: calc(100vh - 300px); /* Ensure the attendance list fits within the screen height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: linear-gradient(45deg, #621c1c, #be6364);
 }
 
 
@@ -188,6 +211,16 @@ header {
     border-radius: 10px;
     width: 100%;
     height: 292px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: linear-gradient(45deg, #621c1c, #be6364);
+    background-color: #621c1c; /* Fallback for older browsers */
+    padding: 25px;
+}
+
+.panel:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Hover effect */
+    transform: translateY(-5px); /* Slight lift on hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .birthdays .panel h3,
@@ -274,9 +307,10 @@ header {
     border: none; /* No border */
     font-size: 15px; /* Font size for visibility */
     cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 10px; /* Space from the note */
-    margin-left: 10px; /* Align it slightly to the left for spacing */
+    margin-top: auto; /* Push button to the bottom */
+    margin-left: 50px;
 }
+
 
 .sign-out-btn:hover {
     color: darkred; /* Darker red for hover effect */

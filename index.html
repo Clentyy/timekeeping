@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SF Group Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome Link -->
 </head>
 <body>
     <div class="container">
@@ -24,15 +25,15 @@
                     <span>Tuesday</span>
                 </p>
                 <div>
-                    <button class="btn">TIME IN</button>
-                    <button class="btn">TIME OUT</button>
+                    <button class="btn"> TIME IN</button> <!-- Icon for TIME IN -->
+                    <button class="btn"> TIME OUT</button> <!-- Icon for TIME OUT -->
                 </div>
             </div>
             <div class="camera">
                 <video id="video" autoplay></video>
             </div>
         </div>  
-        
+
         <div class="attendance-list">
             <h2>Attendance List</h2>
             <div class="note"></div> <!-- Yellow note -->
@@ -40,36 +41,34 @@
                 <!-- JavaScript dynamically appends list items here -->
             </ul>
         </div>
-        
-        
-        
-        
 
         <div class="sidebar">
             <!-- Birthdays Section -->
             <div class="birthdays">
                 <div class="panel">
-                    <h3>Birthdays</h3>
+                    <h3><i class="fas fa-birthday-cake"></i> Birthdays</h3>
                     <div class="note"></div>
                 </div>
             </div>
-        
+            
             <!-- Milestones Section -->
             <div class="milestones">
                 <div class="panel">
-                    <h3>Milestones</h3>
+                    <h3><i class="fas fa-trophy"></i> Milestones</h3>
+                    <div class="note"></div>
+                </div>
+            </div>
+            
+            <!-- Announcements Section -->
+            <div class="announcements">
+                <div class="panel">
+                    <h3><i class="fas fa-bullhorn"></i> Announcements</h3>
                     <div class="note"></div>
                 </div>
             </div>
         
-            <!-- Announcements Section -->
-            <div class="announcements">
-                <div class="panel">
-                    <h3>Announcements</h3>
-                    <div class="note"></div>
-                    <button class="sign-out-btn">Sign Out</button>
-                </div>
-            </div>
+            <!-- Sign Out Button -->
+            <button class="sign-out-btn"><i class="fas fa-sign-out-alt"></i> Sign Out</button> <!-- Independent -->
         </div>
     </div>
     
