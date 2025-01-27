@@ -35,7 +35,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #621c1c; /* Background color */
-    height: 65px; /* Adjust height as needed */
+    height: 8vh; /* Adjust height as needed */
     padding: 0 20px; /* Add spacing inside the header */
     position: relative; /* Ensures the header stays at the top layer */
     width: 100%; /* Full width */
@@ -183,18 +183,6 @@ header {
     padding-top: 20px; /* Give space above items to not be flush with the note */
 }
 
-#attendance-items {
-    list-style: none;
-    padding: 0;
-}
-
-#attendance-items li {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    font-size: 18px;
-    color: #be6364;
-}
-
 .attendance-list .note {
     background: #f9e79f;
     width: 1210px;  /* Make the note full width inside its container */
@@ -208,6 +196,18 @@ header {
     box-sizing: border-box; /* Ensure padding is included in width/height */
     z-index: 1;
     overflow-y: auto;
+}
+
+#attendance-items {
+    list-style: none;
+    padding: 0;
+}
+
+#attendance-items li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    color: #be6364;
 }
 
 .content {
@@ -304,7 +304,7 @@ header {
     font-size: 15px; /* Font size for visibility */
     cursor: pointer; /* Pointer cursor on hover */
     margin-top: auto; /* Push button to the bottom */
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 
